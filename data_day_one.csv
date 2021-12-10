@@ -1,0 +1,84 @@
+n;filename;f;P;tau;comment
+10;scope_10.csv;;;;gain/filter_tc
+11;scope_11.csv;;;;gain/filter_tc
+12;;;;;
+13;scope_13.csv;;;;gain/filter_tc
+14;scope_14.csv;;;;Pulsl?ngen
+15;scope_15.csv;;;;Pulsl?ngen
+16;scope_16.csv;;;;Pulsl?ngen
+17;scope_17.csv;;;;Pulsl?ngen
+18;scope_18.csv;;;;Pulsl?ngen
+19;scope_19.csv;;;;Kalb. Magnetfeld 1
+20;scope_20.csv;;;;Kalb. Magnetfeld 2
+21;scope_21.csv;;;;ERROR
+22;scope_22.csv;;;;ERROR
+23;scope_23.csv;;;;ERROR
+24;scope_24.csv;;;;ERROR
+25;scope_25.csv;;;;empty
+26;scope_26.csv;;;;detuning
+27;scope_27.csv;;;;detuning
+28;scope_28.csv;;;;detuning
+29;scope_29.csv;;;;detuning
+30;scope_30.csv;;;;detuning
+31;scope_31.csv;;;;detuning
+32;scope_32.csv;;;;detuning
+33;scope_33.csv;;;;detuning
+34;scope_34.csv;;;;detuning
+35;scope_35.csv;;;;detuning
+36;scope_36.csv;;;;detuning
+37;scope_37.csv;;100;;T1 aus P
+38;scope_38.csv;;90;;T1 aus P
+39;scope_39.csv;;80;;T1 aus P
+40;scope_40.csv;;70;;T1 aus P
+41;scope_41.csv;;60;;T1 aus P
+42;scope_42.csv;;50;;T1 aus P
+43;scope_43.csv;;40;;T1 aus P
+44;scope_44.csv;;30;;T1 aus P
+45;scope_45.csv;;25;;T1 aus P
+46;scope_46.csv;;20;;T1 aus P
+47;scope_47.csv;;15;;T1 aus P
+48;scope_48.csv;;10;;T1 aus P
+49;scope_49.csv;;8;;T1 aus P
+50;scope_50.csv;;6;;T1 aus P
+51;scope_51.csv;;4;;T1 aus P
+52;scope_52.csv;;2;;T1 aus P
+53;scope_53.csv;;;;
+54;scope_54.csv;;;;
+55;scope_55.csv;;200;0,0001;Hahn-Echo
+56;scope_56.csv;;200;0,002;Hahn-Echo
+57;scope_57.csv;;200;0,005;Hahn-Echo
+58;scope_58.csv;;200;0,0075;Hahn-Echo
+59;scope_59.csv;;200;0,01;Hahn-Echo
+60;scope_60.csv;;200;0,0125;Hahn-Echo
+61;scope_61.csv;;200;0,015;Hahn-Echo
+62;scope_62.csv;;200;0,0175;Hahn-Echo
+63;scope_63.csv;;200;0,02;Hahn-Echo
+64;scope_64.csv;;200;0,0225;Hahn-Echo
+65;scope_65.csv;;200;0,025;Hahn-Echo
+66;scope_66.csv;;200;0,0275;Hahn-Echo
+67;scope_67.csv;;200;0,03;Hahn-Echo
+68;scope_68.csv;;200;0,0325;Hahn-Echo
+69;scope_69.csv;;200;0,035;Hahn-Echo
+70;scope_70.csv;;200;0,0375;Hahn-Echo
+71;scope_71.csv;;200;0,04;Hahn-Echo
+72;scope_72.csv;;200;0,0425;Hahn-Echo
+73;scope_73.csv;;200;0,045;Hahn-Echo
+74;scope_74.csv;;200;0,0475;Hahn-Echo
+75;scope_75.csv;;200;0,05;Hahn-Echo
+76;scope_76.csv;;200;;
+77;scope_77.csv;;200;;Carr-Pucell
+78;scope_78.csv;;200;;Carr-Pucell
+79;scope_79.csv;;200;;Meiboom-Gill
+80;scope_80.csv;;200;;Meiboom-Gill
+81;scope_81.csv;;200;0,0001;WDL n?tig, T1 aus Echo
+82;scope_82.csv;;200;0,001;WDL n?tig, T1 aus Echo
+83;scope_83.csv;;200;0,002;WDL n?tig, T1 aus Echo
+84;scope_84.csv;;200;0,004;WDL n?tig, T1 aus Echo
+85;scope_85.csv;;200;0,008;WDL n?tig, T1 aus Echo
+86;scope_86.csv;;200;0,012;WDL n?tig, T1 aus Echo
+87;scope_87.csv;;200;0,016;WDL n?tig, T1 aus Echo
+88;scope_88.csv;;200;0,02;WDL n?tig, T1 aus Echo
+89;scope_89.csv;;200;0,024;WDL n?tig, T1 aus Echo
+90;scope_90.csv;;200;0,028;WDL n?tig, T1 aus Echo
+91;scope_91.csv;;200;0,032;WDL n?tig, T1 aus Echo
+92;scope_92.csv;;200;0,036;WDL n?tig, T1 aus Echo
