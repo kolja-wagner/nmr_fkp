@@ -6,35 +6,32 @@ Created on Fri Dec 10 18:58:42 2021
 """
 
 import matplotlib.pyplot as plt
-import file_organize as fo
+import file_organizer as fo
 import pandas as pd
 
+path = 'data_day_one'
+file_list = fo.load_file_list(path)
+selection = (fo.select_files(file_list,'meas','A'))
 
+data = fo.load_files(selection)
+data = fo.df_combine(data)
+data.info()
+data.plot(x='time')
 
-file_list = fo.files_one()
-# file_list.info()
-result = (fo.select_files(file_list,'meas','A'))
+# fig, ax = plt.subplots()
 
+# ref = (data[0]['time']).copy()
+# for i, d in file_list.iterrows():
+#     if i == 14: continue
+#     print(i, d['filename'])
+#     data = fo.load_sfile(d['filename'], path=path)
+#     print(len(data))
+#     print(data.columns)
+#     fig, ax = plt.subplots()
 
-file_list.info()
-path='data_day_one'
-
-data = [fo.load_sfile(f['filename'], path) for _,f in file_list.iterrows()]
-
-fig, ax = plt.subplots()
-
-ref = (data[0]['time']).copy()
-for i, d in file_list.iterrows():
-    if i == 14: continue
-    print(i, d['filename'])
-    data = fo.load_sfile(d['filename'], path=path)
-    print(len(data))
-    print(data.columns)
-    fig, ax = plt.subplots()
-
-    data.plot(x='time', y='signal',ax=ax)
-    ax.set_ylim(0,12)
-    plt.show()
+#     data.plot(x='time', y='signal',ax=ax)
+#     ax.set_ylim(0,12)
+#     plt.show()
     # # try:
     #     print(i, (d.loc[0,'time']))
     # except:
