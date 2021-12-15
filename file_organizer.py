@@ -10,6 +10,7 @@ import csv
 import pandas as pd
 import numpy as np
 
+from typing import List
 from dataclasses import dataclass
 
 @dataclass
@@ -47,13 +48,13 @@ def generate_file_list(folder: str, overwrite=False)-> None:
         writer.writeheader()
         writer.writerows(files)
         
-def load_file_list(path: str) -> list[Meas]:
+def load_file_list(path: str) -> List[Meas]:
     ''' parse .csv to list[Meas].'''
     df = pd.read_csv(path+'.csv', sep=',', na_values=['Nan','X','?'], decimal=',')
     file_list = [Meas(**dict(f), path=path) for _, f in df.iterrows()]
     return file_list
             
-def select_files(fileList: list[Meas], param: str, val) -> list[Meas]:
+def select_files(fileList: List[Meas], param: str, val) -> List[Meas]:
     ''' select some files from filelist.'''
     return [m for m in fileList if getattr(m, param) == val]
 
@@ -87,10 +88,10 @@ def load_sfile(filename, path=None) -> pd.DataFrame:
     meas = Meas(filename, path)
     return load_meas(meas)
 
-def load_files(mlist: list[Meas]) -> list[pd.DataFrame]:
+def load_files(mlist: List[Meas]) -> List[pd.DataFrame]:
     return [load_meas(m) for m in mlist]
 
-def df_combine(dlist: list[pd.DataFrame]):
+def df_combine(dlist: List[pd.DataFrame]):
     ref = dlist[0]
     equal = [(ref['time'] == d['time']).all() for d in dlist]
     # print('equal: ', np.all(equal))
