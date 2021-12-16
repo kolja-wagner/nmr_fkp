@@ -1,43 +1,43 @@
 filename,meas,comment,useful,F,A,B,N,tau,P
-scope_093.csv,I,Kalibration,?,"21,1130","4,5",X,X,X,100
-scope_094.csv,I,Kalibration/MagField,?,"21,1130","4,5",X,X,X,100
-scope_095.csv,I,Kalibration/180?,?,"21,1130","4,5",X,X,X,100
-scope_096.csv,J,Pulse/90?,?,"21,1650","4,2",X,X,X,100
-scope_097.csv,J,Pulse/180?,?,"21,1620","8,4",X,X,X,100
-scope_098.csv,J,Pulse/270?,?,"21,1650","12,6",X,X,X,100
-scope_099.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,1000
-scope_100.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,900
-scope_101.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,800
-scope_102.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,700
-scope_103.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,600
-scope_104.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,500
-scope_105.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,400
-scope_106.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,300
-scope_107.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,240
-scope_108.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,220
-scope_109.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,200
-scope_110.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,180
-scope_111.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,160
-scope_112.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,140
-scope_113.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,120
-scope_114.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,100
-scope_115.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,90
-scope_116.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,80
-scope_117.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,70
-scope_118.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,60
-scope_119.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,50
-scope_120.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,40
-scope_121.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,30
-scope_122.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,20
-scope_123.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,15
-scope_124.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,10
-scope_125.csv,K,Variation Periodendauer,True,"21,16200","4,2",X,X,X,5
+scope_093.csv,I,Kalibration,?,"21,113","4,5",X,X,X,100
+scope_094.csv,I,Kalibration/MagField,?,"21,113","4,5",X,X,X,100
+scope_095.csv,I,Kalibration/180?,?,"21,113","4,5",X,X,X,100
+scope_096.csv,J,Pulse/90?,?,"21,165","4,2",X,X,X,100
+scope_097.csv,J,Pulse/180?,?,"21,162","8,4",X,X,X,100
+scope_098.csv,J,Pulse/270?,?,"21,165","12,6",X,X,X,100
+scope_099.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,1000
+scope_100.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,900
+scope_101.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,800
+scope_102.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,700
+scope_103.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,600
+scope_104.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,500
+scope_105.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,400
+scope_106.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,300
+scope_107.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,240
+scope_108.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,220
+scope_109.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,200
+scope_110.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,180
+scope_111.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,160
+scope_112.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,140
+scope_113.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,120
+scope_114.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,100
+scope_115.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,90
+scope_116.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,80
+scope_117.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,70
+scope_118.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,60
+scope_119.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,50
+scope_120.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,40
+scope_121.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,30
+scope_122.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,20
+scope_123.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,15
+scope_124.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,10
+scope_125.csv,K,Variation Periodendauer,True,"21,162","4,2",X,X,X,5
 scope_126.csv,L,T1 from Tau,True,"21,15245","4,1","8,2",1,"0,1",200
-scope_127.csv,L,T1 from Tau,True,"21,15230","4,1","8,2",1,1,200
+scope_127.csv,L,T1 from Tau,True,"21,1523","4,1","8,2",1,1,200
 scope_128.csv,L,T1 from Tau,True,"21,15226","4,1","8,2",1,2,200
-scope_129.csv,L,T1 from Tau,True,"21,15220","4,1","8,2",1,3,200
+scope_129.csv,L,T1 from Tau,True,"21,1522","4,1","8,2",1,3,200
 scope_130.csv,L,T1 from Tau,True,"21,15213","4,1","8,2",1,4,200
-scope_131.csv,L,T1 from Tau,True,"21,15210","4,1","8,2",1,5,200
+scope_131.csv,L,T1 from Tau,True,"21,1521","4,1","8,2",1,5,200
 scope_132.csv,L,T1 from Tau,True,"21,15203","4,1","8,2",1,6,200
 scope_133.csv,L,T1 from Tau,True,,"4,1","8,2",1,7,200
 scope_134.csv,L,T1 from Tau,True,,"4,1","8,2",1,8,200
@@ -53,7 +53,7 @@ scope_143.csv,L,T1 from Tau,True,"21,15149","4,1","8,2",1,35,200
 scope_144.csv,L,T1 from Tau,True,,"4,1","8,2",1,40,200
 scope_145.csv,L,T1 from Tau,True,"21,15144","4,1","8,2",1,42,200
 scope_146.csv,L,T1 from Tau,True,,"4,1","8,2",1,44,200
-scope_147.csv,X,ERROR,False,,"4,1","8,2",1,,200
+scope_147.csv,L,ERROR,False,,"4,1","8,2",1,,200
 scope_148.csv,L,T1 from Tau,True,,"4,1","8,2",1,46,200
 scope_149.csv,L,T1 from Tau,True,"21,151","4,1","8,2",1,48,200
 scope_150.csv,L,T1 from Tau,True,,"4,1","8,2",1,50,200
@@ -66,7 +66,7 @@ scope_156.csv,L,T1 from Tau,True,"21,15055","4,1","8,2",1,70,200
 scope_157.csv,L,T1 from Tau,True,,"4,1","8,2",1,75,200
 scope_158.csv,L,T1 from Tau,True,,"4,1","8,2",1,80,200
 scope_159.csv,L,T1 from Tau,True,,"4,1","8,2",1,85,200
-scope_160.csv,X,ERROR,False,,"4,1","8,2",1,,200
+scope_160.csv,L,ERROR,False,,"4,1","8,2",1,,200
 scope_161.csv,L,T1 from Tau,True,,"4,1","8,2",1,90,200
 scope_162.csv,L,T1 from Tau,True,,"4,1","8,2",1,100,200
 scope_163.csv,L,T1 from Tau,True,,"4,1","8,2",1,110,200

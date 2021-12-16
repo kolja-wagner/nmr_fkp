@@ -76,6 +76,14 @@ class Horizontal:
         info = [i.replace('Main ', '') for i in info]
         info = {k.split(' ')[0].lower():k.split(' ')[1] for k in info}
         return Horizontal(**info)
+    
+    def get_time_delay(self):
+        if 'us' in self.delay:
+            return float(self.delay[:-2])*1e-6
+        if 'ms' in self.delay:
+            return float(self.delay[:-2])*1e-3
+        elif 's' in self.delay:
+            return float(self.delay[:-1])
 
 @dataclass
 class Acquisition:
@@ -169,19 +177,20 @@ def load_param(path):
     
 
 
-def _test():
-    path = r'data_day_two/scope_140.txt'
+# def _test():
+if __name__ == '__main__' :
+    
+    path = r'data_day_two/scope_110.txt'
     lines = _read_file(path)
     idx = _get_indices(lines)
     
     k = 'HORIZONTAL'
     for k in _KEYWORDS:
         info = _info_from_keyword(k, idx, lines)
-        print(_parse_info(k, info), '\n')
+        # print(_parse_info(k, info), '\n')
         
     p = load_param(path)
-    print(p)
+    print(f'offset: {p.horizontal.get_time_delay()} ms')
 
-
-if __name__ == '__main__' :
-    _test()        
+# if __name__ == '__main__' :
+    # _test()        
