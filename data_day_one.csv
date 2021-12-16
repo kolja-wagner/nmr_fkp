@@ -1,4 +1,4 @@
-filename,meas,comment,useful,F,A_len,B_len,B_count,tau,P
+filename,meas,comment,useful,F,A,B,N,tau,P
 scope_10.csv,A,filter_tc=min,?,,,X,X,0,100
 scope_11.csv,A,filter_tc=0.033,?,,,X,X,0,
 scope_13.csv,A,filter_tc=0.33,?,,,X,X,0,

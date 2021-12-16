@@ -11,31 +11,24 @@ import pandas as pd
 
 path = 'data_day_one'
 file_list = fo.load_file_list(path)
-selection = (fo.select_files(file_list,'meas','A'))
+selection = (fo.select_files(file_list,'meas','E'))
 
 data = fo.load_files(selection)
 data = fo.df_combine(data)
-data.info()
-data.plot(x='time')
+# data.info()
 
-# fig, ax = plt.subplots()
+del(data['so'])
+# data.plot(x='time')
 
-# ref = (data[0]['time']).copy()
-# for i, d in file_list.iterrows():
-#     if i == 14: continue
-#     print(i, d['filename'])
-#     data = fo.load_sfile(d['filename'], path=path)
-#     print(len(data))
-#     print(data.columns)
-#     fig, ax = plt.subplots()
+# print(selection)
 
-#     data.plot(x='time', y='signal',ax=ax)
-#     ax.set_ylim(0,12)
-#     plt.show()
-    # # try:
-    #     print(i, (d.loc[0,'time']))
-    # except:
-        # print(i, 'Error')
+label = list(data.columns)
+label.remove('time')
+print(label)
 
-# print(data[10])
+maximum = [data[l].max() for l in label]
 
+P = [meas.P for meas in selection]
+print(P)
+print(maximum)
+plt.plot(P, maximum)
