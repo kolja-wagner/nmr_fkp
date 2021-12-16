@@ -23,12 +23,12 @@ class Meas:
     useful:   bool = False
         
     # physical parameter
-    F:          float = None
-    A_len:      float = None
-    B_len:      float = None
-    B_count:    float = None
-    tau:        float = None
-    P:          float = None
+    F:      float = None
+    A:      float = None
+    B:      float = None
+    N:      float = None
+    tau:    float = None
+    P:      float = None
     
     def __str__(self):
         return f'Meas({self.filename}, meas={self.meas}, use={self.useful})'
@@ -109,35 +109,38 @@ def df_combine(dlist: List[pd.DataFrame]):
     
 def main():
     # test some functions
+    # generate_file_list('data_day_two')
+    import matplotlib.pyplot as plt
     
-    path = 'data_day_one'
+    
+    path = 'data_day_two'
     all_files = load_file_list(path)
-    select = select_files(all_files,'meas','H')
-    
+    select = select_files(all_files,'meas','K')
     print('länge:',len(all_files), len(select))
-    # data = load_files(select)
-    # print(data[0].meas)
+    data = load_files(select)
+    ref = df_combine(data)
     
-    print(select[0].tau)
-    # ref = data[0]
-    # print('equal: ', )
+    label = list(ref.columns)
+    label.remove('iout')
+    label.remove('time')
+     
+    I = [ref[l].max() for l in label]
+    P = [m.P for m in select]
+    # plt.plot(P,I)
     
-    # ref = df_combine(data)
-    # print(ref.idx)
     
-    # equal = [ (ref['time'] == d['time']).all() for d in data]
-    # print('equal:', np.all(equal))
+    select = select_files(all_files, 'meas', 'L')
+    data = load_files(select)
+    data = df_combine(data)
+    del(data['iout'])
     
-    # for d in data:
-    #     d.idx = int(d.meas.filename.split('.')[0].split('_')[1])
-    #     equal = (ref['time'] == d['time']).all()
-    #     print(d.idx, equal)
-        
-    #     ref[f'signal_{d.idx}'] = d['signal'] 
-    # del(ref['signal'])
-    # ref.info()
+    fig, ax = plt.subplots()
+    data.plot(x='time', ax=ax)
+    ax.legend().remove()
     
-    # ref.plot(x='time')
+    print(select[0].filename, select[10].filename, select[-1].filename)
+    
+    
     
     
     pass
