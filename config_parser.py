@@ -8,6 +8,7 @@ PASER FÜR OSZILLOSKOP-CONFIG-DATEN
 import os
 import datetime
 from dataclasses import dataclass    
+from deprecated import deprecated
 from typing import List, Dict
 
 _KEYWORDS = ['ANALOG', 'TRIGGER', 'HORIZONTAL', 'ACQUISITION', 'MEASUREMENTS']
@@ -30,13 +31,37 @@ class Channel:
         for i,c in enumerate(ch_list):
             if c[0] =='Ch':
                 ch_list.append(c[2:])
-                ch_list[i] = c[:2]
+                ch_list[i] = ['ch', int(c[1])]
             elif c[0] == 'BW':
                 ch_list[i] = ['bw_limit', c[-1]]
             else:
                 ch_list[i] = [c[0], ''.join(c[1:])]
         ch_dict = {c[0].lower():c[1] for c in ch_list}
+        for k,v in ch_dict.items():
+            if isinstance(v, str) and v.lower() == "on":
+                ch_dict[k] = True
+            if isinstance(v, str) and v.lower() == "off":
+                ch_dict[k] = False
+        
         return Channel(**ch_dict)
+
+    def get_voffset(self):
+        if 'mV' in self.pos:
+            return float(self.pos[:-2])*1e-3
+        elif 'V' in self.pos:
+            return float(self.pos[:-1])
+    
+    @deprecated('use get_tdelay()')
+    def get_voltage_offset(self):
+        return self.get_voffset()
+    
+    def get_vscale(self):
+        if 'uV' in self.scale:
+            return float(self.scale[:-2])*1e-6
+        if 'mV' in self.scale:
+            return float(self.scale[:-2])*1e-3
+        if 'V' in self.scale:
+            return float(self.scale[:-1])
 
 @dataclass
 class Trigger:
@@ -61,6 +86,12 @@ class Trigger:
             if e[0] == 'HF':
                 elements[i] = ['hf_rej', e[2]]
         e_dict = {e[0].lower() : e[1] for e in elements}
+        for k,v in e_dict.items():
+            if v.lower() == "on":
+                e_dict[k] = True
+            if v.lower() == "off":
+                e_dict[k] = False
+        
         return Trigger(**e_dict)
         
 @dataclass
@@ -75,9 +106,10 @@ class Horizontal:
         info = [i.strip() for i in info.split(',')]
         info = [i.replace('Main ', '') for i in info]
         info = {k.split(' ')[0].lower():k.split(' ')[1] for k in info}
+        
         return Horizontal(**info)
     
-    def get_time_delay(self):
+    def get_tdelay(self):
         if 'us' in self.delay:
             return float(self.delay[:-2])*1e-6
         if 'ms' in self.delay:
@@ -85,6 +117,18 @@ class Horizontal:
         elif 's' in self.delay:
             return float(self.delay[:-1])
 
+    @deprecated('use get_tdelay()')
+    def get_time_delay(self):
+        return self.get_tdelay()
+
+    def get_tscale(self):
+        if 'us' in self.scale:
+            return float(self.scale[:-2])*1e-6
+        if 'ms' in self.scale:
+            return float(self.scale[:-2])*1e-3
+        if 's' in self.scale:
+            return float(self.scale[:-1])
+        
 @dataclass
 class Acquisition:
     mode: str
@@ -96,6 +140,11 @@ class Acquisition:
     def from_info(cls, info: str):
         elements = [s.strip().split(' ') for s in info.split(',')]
         e_dict = {e[0].lower():e[1] for e in elements}
+        for k,v in e_dict.items():
+            if v.lower() == "on":
+                e_dict[k] = True
+            if v.lower() == "off":
+                e_dict[k] = False
         return Acquisition(**e_dict) 
     
 @dataclass
@@ -187,10 +236,11 @@ if __name__ == '__main__' :
     k = 'HORIZONTAL'
     for k in _KEYWORDS:
         info = _info_from_keyword(k, idx, lines)
-        # print(_parse_info(k, info), '\n')
+        print(_parse_info(k, info), '\n')
         
     p = load_param(path)
-    print(f'offset: {p.horizontal.get_time_delay()} ms')
+    print(f'offset: {p.horizontal.get_tdelay()} s')
+    print(f'v-offset: {p.analog[0].get_voffset()} V')
 
 # if __name__ == '__main__' :
     # _test()        

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-file handeling for NRM-Versuch
+file handeling for NRM-Versuch.
+Einlesen von Oszilloskop-Messwerten.
 
 @author: kolja
 """
@@ -11,7 +12,10 @@ import pandas as pd
 import numpy as np
 
 from typing import List
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
+import warnings
+
+
 
 @dataclass
 class Meas:
@@ -40,11 +44,14 @@ def generate_file_list(folder: str, overwrite=False)-> None:
     if os.path.exists(fname) and not overwrite:
         raise ValueError(f'{folder}: file-list exist but overwrite is set to false.')
     
-    files = [{'filename': f, 'n':i} for i,f in enumerate(os.listdir(folder)) if '.csv' in f]
+    files = [{'filename': f} for i,f in enumerate(os.listdir(folder)) if '.csv' in f]
     print(f'{folder}: {len(files)} files found.')
     
+    fnames = [f.name for f in fields(Meas)]
+    fnames.remove('path')
+    
     with open(fname, 'w', newline='\n') as f:
-        writer = csv.DictWriter(f, fieldnames=['n','filename', 'meas'])
+        writer = csv.DictWriter(f, fieldnames=fnames)
         writer.writeheader()
         writer.writerows(files)
         
@@ -93,8 +100,13 @@ def load_files(mlist: List[Meas]) -> List[pd.DataFrame]:
 
 def df_combine(dlist: List[pd.DataFrame]):
     ref = dlist[0]
+    
+    # check if timescale is equal
     equal = [(ref['time'] == d['time']).all() for d in dlist]
-    # print('equal: ', np.all(equal))
+    if not np.all(equal):
+        warnings.warn("df_combine: timescales are not equal", 
+                  category = UserWarning, stacklevel=2)
+    
     
     for d in dlist:
         ref[f'signal_{d.idx}'] = d['signal'] 
