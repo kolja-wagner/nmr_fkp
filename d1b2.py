@@ -39,13 +39,13 @@ i = 43
 ran = slice(0,43)
 for d, delay, P in zip(data[ran], delays[ran], tau[ran]):
     # d['time'] = d['time'] + delay
-    d.plot(x='time', y='signal', ax=ax, label=P, color='gray ')
+    d.plot(x='time', y='signal', ax=ax, label=P, color='gray')
     pass
 ax.set_xlim(-0.02, 0.2)
 ax.set_ylim(-0,9)
 
 ax.scatter(mtim[ran], msig[ran])
-ax.scatter(tau[ran]*1e-3, msig[ran], marker='x')
+# ax.scatter(tau[ran]*1e-3, msig[ran], marker='x')
 ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 ax.legend().remove()
 # print(len(label), len(delay))
