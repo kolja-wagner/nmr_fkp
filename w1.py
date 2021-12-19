@@ -4,6 +4,7 @@ Created on Fri Dec 17 12:21:31 2021
 
 @author: kolja
 """
+
 import matplotlib.pyplot as plt
 import file_organizer as fo
 
@@ -13,7 +14,7 @@ from scipy.signal import find_peaks
 
 PATH = 'data_day_three'
 
-
+# 171 - 175: 
 d = fo.load_sfile('scope_173.csv', path=PATH)
 
 fig, ax = plt.subplots()
@@ -30,4 +31,6 @@ ax.scatter(ptime, pval)
 fit = fit_t2(ptime, pval, log=True)
 ax.plot(ptime, fit.best_fit)
 ax.set_title('MG for water-probe')
-ax.text(1,2,f'T2 = {fit.params["T2"].value:.2f} $\\pm$ {fit.params["T2"].stderr:.2f}')
+ax.text(1,2,f'T2 = {fit.params["T2"].value*1000:.2f} $\\pm$ {fit.params["T2"].stderr*1000:.2f} ms')
+ax.set_xlabel('time [s]')
+ax.set_ylabel ('induced voltage [V]')
