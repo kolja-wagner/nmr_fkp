@@ -8,7 +8,6 @@ PASER FÜR OSZILLOSKOP-CONFIG-DATEN
 import os
 import datetime
 from dataclasses import dataclass    
-from deprecated import deprecated
 from typing import List, Dict
 
 _KEYWORDS = ['ANALOG', 'TRIGGER', 'HORIZONTAL', 'ACQUISITION', 'MEASUREMENTS']
@@ -51,9 +50,8 @@ class Channel:
         elif 'V' in self.pos:
             return float(self.pos[:-1])
     
-    @deprecated('use get_tdelay()')
-    def get_voltage_offset(self):
-        return self.get_voffset()
+    
+    
     
     def get_vscale(self):
         if 'uV' in self.scale:
@@ -117,9 +115,7 @@ class Horizontal:
         elif 's' in self.delay:
             return float(self.delay[:-1])
 
-    @deprecated('use get_tdelay()')
-    def get_time_delay(self):
-        return self.get_tdelay()
+    
 
     def get_tscale(self):
         if 'us' in self.scale:
@@ -159,7 +155,7 @@ class Measurements:
 class OszParam:
     file: str
     datetime: datetime.datetime
-    analog: list[Channel]
+    analog: ist[Channel]
     horizontal: Horizontal
     trigger: Trigger
     acquisition: Acquisition
