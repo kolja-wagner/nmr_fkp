@@ -1,0 +1,78 @@
+filename,meas,comment,useful,F,A,B,N,tau,P
+scope_10.csv,A,filter_tc=min,?,,,X,X,0,100
+scope_11.csv,A,filter_tc=0.033,?,,,X,X,0,
+scope_13.csv,A,filter_tc=0.33,?,,,X,X,0,
+scope_14.csv,B,Pi/Pihalbe pulse,?,,"0,02",X,X,0,
+scope_15.csv,B,Pi/Pihalbe pulse,?,,"7,3",X,X,0,
+scope_16.csv,B,Pi/Pihalbe pulse,?,,"3,66",X,X,0,
+scope_17.csv,B,Pi/Pihalbe pulse,?,,"10,94",X,X,0,
+scope_18.csv,B,Pi/Pihalbe pulse,?,,"13,64",X,X,0,
+scope_19.csv,C,Mag.Cal,?,"21,19302","3,66",X,X,0,
+scope_20.csv,C,Mag.Cal,?,"21,19355","3,66",X,X,0,
+scope_26.csv,D,detuning,?,,,X,X,0,
+scope_27.csv,D,detuning,?,,,X,X,0,
+scope_28.csv,D,detuning,?,,,X,X,0,
+scope_29.csv,D,detuning,?,,,X,X,0,
+scope_30.csv,D,detuning,?,,,X,X,0,
+scope_31.csv,D,detuning,?,,,X,X,0,
+scope_32.csv,D,detuning,?,,,X,X,0,
+scope_33.csv,D,detuning,?,,,X,X,0,
+scope_34.csv,D,detuning,?,,,X,X,0,
+scope_35.csv,D,detuning,?,,,X,X,0,
+scope_36.csv,D,detuning,?,,,X,X,0,
+scope_37.csv,E,T1 aus P,?,,,0,0,0,100
+scope_38.csv,E,T1 aus P,?,,,0,0,0,90
+scope_39.csv,E,T1 aus P,?,,,0,0,0,80
+scope_40.csv,E,T1 aus P,?,,,0,0,0,70
+scope_41.csv,E,T1 aus P,?,,,0,0,0,60
+scope_42.csv,E,T1 aus P,?,,,0,0,0,50
+scope_43.csv,E,T1 aus P,?,,,0,0,0,40
+scope_44.csv,E,T1 aus P,?,,,0,0,0,30
+scope_45.csv,E,T1 aus P,?,,,0,0,0,25
+scope_46.csv,E,T1 aus P,?,,,0,0,0,20
+scope_47.csv,E,T1 aus P,?,,,0,0,0,15
+scope_48.csv,E,T1 aus P,?,,,0,0,0,10
+scope_49.csv,E,T1 aus P,?,,,0,0,0,8
+scope_50.csv,E,T1 aus P,?,,,0,0,0,6
+scope_51.csv,E,T1 aus P,?,,,0,0,0,4
+scope_52.csv,E,T1 aus P,?,,,0,0,0,2
+scope_53.csv,X,,?,,,,,,
+scope_54.csv,X,,?,,,,,,
+scope_55.csv,F,Hahn-Echo,?,,,,,"0,0001",200
+scope_56.csv,F,Hahn-Echo,?,,,,,"0,0002",200
+scope_57.csv,F,Hahn-Echo,?,,,,,"0,0005",200
+scope_58.csv,F,Hahn-Echo,?,,,,,"0,0075",200
+scope_59.csv,F,Hahn-Echo,?,,,,,"0,01",200
+scope_60.csv,F,Hahn-Echo,?,,,,,"0,0125",200
+scope_61.csv,F,Hahn-Echo,?,,,,,"0,015",200
+scope_62.csv,F,Hahn-Echo,?,,,,,"0,0175",200
+scope_63.csv,F,Hahn-Echo,?,,,,,"0,02",200
+scope_64.csv,F,Hahn-Echo,?,,,,,"0,0225",200
+scope_65.csv,F,Hahn-Echo,?,,,,,"0,025",200
+scope_66.csv,F,Hahn-Echo,?,,,,,"0,0275",200
+scope_67.csv,F,Hahn-Echo,?,,,,,"0,03",200
+scope_68.csv,F,Hahn-Echo,?,,,,,"0,0325",200
+scope_69.csv,F,Hahn-Echo,?,,,,,"0,035",200
+scope_70.csv,F,Hahn-Echo,?,,,,,"0,0375",200
+scope_71.csv,F,Hahn-Echo,?,,,,,"0,04",200
+scope_72.csv,F,Hahn-Echo,?,,,,,"0,0425",200
+scope_73.csv,F,Hahn-Echo,?,,,,,"0,045",200
+scope_74.csv,F,Hahn-Echo,?,,,,,"0,0475",200
+scope_75.csv,F,Hahn-Echo,?,,,,,"0,05",200
+scope_76.csv,X,,?,,,,,,
+scope_77.csv,G1,Carr-Pucell,?,,,,,,200
+scope_78.csv,G1,Carr-Pucell,?,,,,,,200
+scope_79.csv,G2,Meiboom-Gill,?,,,,,,200
+scope_80.csv,G2,Meiboom-Gill,?,,,,,,200
+scope_81.csv,H, T1 aus Echo,False,,,,,1,200
+scope_82.csv,H, T1 aus Echo,False,,,,,1,200
+scope_83.csv,H, T1 aus Echo,False,,,,,2,200
+scope_84.csv,H, T1 aus Echo,False,,,,,4,200
+scope_85.csv,H, T1 aus Echo,False,,,,,8,200
+scope_86.csv,H, T1 aus Echo,False,,,,,12,200
+scope_87.csv,H, T1 aus Echo,False,,,,,16,200
+scope_88.csv,H, T1 aus Echo,False,,,,,20,200
+scope_89.csv,H, T1 aus Echo,False,,,,,24,200
+scope_90.csv,H, T1 aus Echo,False,,,,,28,200
+scope_91.csv,H, T1 aus Echo,False,,,,,32,200
+scope_92.csv,H, T1 aus Echo,False,,,,,36,200
