@@ -79,7 +79,7 @@ def load_meas(meas: Meas) -> pd.DataFrame:
     filename = meas.filename
     if meas.path != None:
         filename = meas.path + '/' + filename
-    df = pd.read_csv(filename, skiprows=[1])
+    df = pd.read_csv(filename, skiprows=[1], na_values=['Nan','NaN'])
     df.columns = [parse_column_name(c) for c in df.columns]
     df.meas = meas
     

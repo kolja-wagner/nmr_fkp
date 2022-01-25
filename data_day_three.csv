@@ -1,35 +1,35 @@
 filename,meas,comment,useful,F,A,B,N,tau,P
-scope_171.csv,M,DIW MeiboomGill,,,,,,,
-scope_172.csv,M,DIW MeiboomGill,,,,,,,
-scope_173.csv,M,DIW MeiboomGill,,,,,,,
-scope_174.csv,M,DIW MeiboomGill,,,,,,,
-scope_175.csv,M,DIW MeiboomGill,,,,,,,
-scope_176.csv,N,DIW FID,,,,,,,
-scope_177.csv,N,DIW FID,,,,,,,
-scope_178.csv,O,Fluor,,,,,,,
-scope_179.csv,O,Fluor,,,,,,,
-scope_180.csv,P,,,,,,,,
-scope_181.csv,P,,,,,,,,
-scope_182.csv,P,,,,,,,,
-scope_183.csv,P,,,,,,,,
-scope_184.csv,P,,,,,,,,
-scope_185.csv,P,,,,,,,,
-scope_186.csv,P,,,,,,,,
-scope_187.csv,P,,,,,,,,
-scope_188.csv,P,,,,,,,,
-scope_189.csv,P,,,,,,,,
-scope_190.csv,P,,,,,,,,
-scope_191.csv,P,,,,,,,,
-scope_192.csv,P,,,,,,,,
-scope_193.csv,P,,,,,,,,
-scope_194.csv,P,,,,,,,,
-scope_195.csv,P,,,,,,,,
-scope_196.csv,P,,,,,,,,
-scope_197.csv,P,,,,,,,,
-scope_198.csv,P,,,,,,,,
-scope_199.csv,P,,,,,,,,
-scope_200.csv,P,,,,,,,,
-scope_201.csv,Q,Detuning,,,,,,,
-scope_202.csv,Q,Detuning,,,,,,,
-scope_203.csv,Q,Detuning,,,,,,,
-scope_204.csv,Q,Detuning,,,,,,,
+scope_171.csv,M,DIW MeiboomGill,?,21.0939,4.78,9.56,75,0.012,8
+scope_172.csv,M,DIW MeiboomGill,?,21.0939,4.78,9.56,75,0.012,8
+scope_173.csv,M,DIW MeiboomGill,?,21.0939,4.78,9.56,75,0.012,8
+scope_174.csv,M,DIW MeiboomGill,?,21.0939,4.78,9.56,75,0.012,8
+scope_175.csv,M,DIW MeiboomGill,?,21.0939,4.78,9.56,75,0.012,8
+scope_176.csv,N,DIW FID,?,21.0878,4.78,0,0,0,8
+scope_177.csv,N,DIW FID,?,21.0878,4.78,0,0,0,8
+scope_178.csv,O,Fluor_FID,?,19.836,8.4,0,0,0,2
+scope_179.csv,O,Fluor_FID,?,19.836,4.2,0,0,0,2
+scope_180.csv,P,Fluor_P,?,19.835,4.2,0,0,0,10
+scope_181.csv,P,Fluor_P,?,19.835,4.2,0,0,0,8
+scope_182.csv,P,Fluor_P,?,19.835,4.2,0,0,0,6
+scope_183.csv,P,Fluor_P,?,19.835,4.2,0,0,0,4
+scope_184.csv,P,Fluor_P,?,19.835,4.2,0,0,0,2
+scope_185.csv,P,Fluor_P,?,19.835,4.2,0,0,0,1.8
+scope_186.csv,P,Fluor_P,?,19.835,4.2,0,0,0,1.6
+scope_187.csv,P,Fluor_P,?,19.835,4.2,0,0,0,1.4
+scope_188.csv,P,Fluor_P,?,19.835,4.2,0,0,0,1.2
+scope_189.csv,P,Fluor_P,?,19.835,4.2,0,0,0,1.0
+scope_190.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.9
+scope_191.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.8
+scope_192.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.7
+scope_193.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.6
+scope_194.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.5
+scope_195.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.4
+scope_196.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.2
+scope_197.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.1
+scope_198.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.05
+scope_199.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.01
+scope_200.csv,P,Fluor_P,?,19.835,4.2,0,0,0,0.3
+scope_201.csv,Q,Flour_Detuning,?,19.83383,4.2,0,0,0,2
+scope_202.csv,Q,Flour_Detuning,?,19.83383,4.2,0,0,0,2
+scope_203.csv,Q,Flour_Detuning,?,19.93383,4.2,0,0,0,2
+scope_204.csv,Q,Flour_Detuning,?,20.03383,4.2,0,0,0,2
