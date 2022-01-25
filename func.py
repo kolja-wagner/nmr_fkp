@@ -6,8 +6,11 @@ Hilfsfunktionen
 """
 
 import matplotlib as mpl
-from lmfit.models import Model
+import matplotlib.ticker as ticker
 import numpy as np
+
+from lmfit.models import Model
+from file_organizer import Meas
 
 
 def get_norm_cm(label: str, vmin: float, vmax: float):
@@ -16,18 +19,46 @@ def get_norm_cm(label: str, vmin: float, vmax: float):
     n = mpl.colors.Normalize(vmin, vmax)
     return lambda x: m(n(x)), m, n
 
+
 def fit_t2(t, y, log=False):
-    def t2func(t, M0, T2, const):#
-        return M0*np.exp(-t/T2)+const
+    def t2func(t, M0, T2):#
+        return M0*np.exp(-t/T2)#+const
 
     model = Model(t2func, nan_policy='omit')
-    res = model.fit(y, t=t, M0=1, T2=0.02, const=0)
+    res = model.fit(y, t=t, M0=1, T2=20)
     if log: print(res.fit_report())
     return res
 
+def fit_t1(t, y, log=False):
+    ''' clean function. '''
+    def fitfunc(t, M0, T1):
+        return M0*(1-np.exp(-t/T1))
 
-import matplotlib.ticker as ticker
-import numpy as np
+    model = Model(fitfunc, nan_policy='omit')
+    res = model.fit(y, t=t, M0=10, T1=10)
+    if log: print(res.fit_report())
+    return res
+
+def fit_t2c(t, y, log=False):
+    def t2func(t, M0, T2,c):#
+        return M0*np.exp(-t/T2)+c
+
+    model = Model(t2func, nan_policy='omit')
+    res = model.fit(y, t=t, M0=1, T2=20,c=0)
+    if log: print(res.fit_report())
+    return res
+    
+def get_datetime(meas: Meas):
+    filename= meas.filename
+    df = pd.read_csv('datetime.csv')
+
+    result = list(df[df['filename'] == filename]['datetime'])
+
+    if len(result):
+        return datetime.strptime(result[0],  '%Y-%m-%d %H:%M:%S')
+    return None
+        
+
 
 def ticks_minor(ax, which='x', minorCount=2):
     if which=='x':
@@ -62,4 +93,4 @@ def ticks_handle(ax, which='x', other=True, minorCount=2):
     ticks_minor(ax, which, minorCount)
     if other:
         ticks_other(ax, which)
-        
+
